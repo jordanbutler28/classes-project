@@ -1,4 +1,17 @@
+private val persons = ArrayList<Person>()
+
 fun main() {
+
+    persons.add(Person("Mark", "Roche"))
+    persons.add(Person("John", "Walsh"))
+    persons.add(Person("Sheila", "Flynn"))
+
+    for ((index, value) in persons.withIndex())
+        println("$index: $value")
+
+}
+
+fun personInfo() {
 
     val person1 = Person("Mark", "Roche")
     val person2 = person1.copy(firstName = "Clare")
@@ -20,5 +33,4 @@ fun main() {
         println("person1 is equal to person3")
     else
         println("person1 is not equal to person3")
-
 }
